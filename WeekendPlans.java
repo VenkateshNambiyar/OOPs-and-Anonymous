@@ -85,9 +85,22 @@ public class WeekendPlans {
 	}
 	
 	private final void plans() {
-		WeekendPlans weekendObject = new WeekendPlans();
-		
 		System.out.println("Select Weekend Plans : 1)Trip   \t  2)Theatre \t 3)Mall  \t 4)Cricket :\t ");
+		while (true) {
+			
+			try {
+				selectPlans();
+				break;
+			} catch (InputMismatchException e) {
+				System.out.println("Invalid Selection.. So Select Valid Plan");
+				scanner.nextLine();
+			}
+		}
+	}
+	
+	private final void selectPlans() {
+		WeekendPlans weekendObject = new WeekendPlans();
+			
 		store = scanner.nextInt();
 		
 		switch(store) {
