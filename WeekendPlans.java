@@ -3,7 +3,7 @@ package com.weekend;
 import java.util.*;
 
 public class WeekendPlans {
-	private final Scanner scanner = new Scanner(System.in);
+	private final Scanner SCANNER = new Scanner(System.in);
 	
 	private String location;
 	private String hotel;
@@ -16,24 +16,24 @@ public class WeekendPlans {
 	
 	private final void assignValue() {
 		System.out.print("Enter your Location :\t "); 
-		location = scanner.nextLine();
+		location = SCANNER.nextLine();
 		
 		System.out.print("Book your Resort :\t "); 
-		hotel = scanner.nextLine();
+		hotel = SCANNER.nextLine();
 	}
 	
 	private final void assignNumber() {
 		System.out.println("Select Show Time : 1) Morning Show  \t  2) Afternoon Show \t 3)Evening Show  \t 4) Night Show :\t ");
 		System.out.print("Enter Your Show Timing : \t");
-		show = scanner.nextLine();
+		show = SCANNER.nextLine();
 	}
 	
 	private final void assignData() {
 		System.out.print("Enter Your Shoes size :\t");
-		size = scanner.nextLine();
+		size = SCANNER.nextLine();
 		
 		System.out.print("Enter Your Color : \t");
-		color = scanner.nextLine();
+		color = SCANNER.nextLine();
 	}
 	
 	private final void trip() {
@@ -102,22 +102,13 @@ public class WeekendPlans {
 		WeekendPlans weekendObject = new WeekendPlans();
 			
 		store = scanner.nextInt();
-		
-		switch(store) {
-		case 1:
-			weekendObject.trip();
-			break;
-		case 2:
-			weekendObject.theatre();
-			break;
-		case 3:
-			weekendObject.mall();
-			break;
-		case 4:
-			weekendObject.cricket();
-			break;
-		default:
-			System.out.println("Invalid Selection so Kindly Retry");
+
+		switch (store) {
+			case 1 -> weekendObject.trip();
+			case 2 -> weekendObject.theatre();
+			case 3 -> weekendObject.mall();
+			case 4 -> weekendObject.cricket();
+			default -> System.out.println("Invalid Selection so Kindly Retry");
 		}
 	}
 	

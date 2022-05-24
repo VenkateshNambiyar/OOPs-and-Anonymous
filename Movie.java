@@ -20,22 +20,13 @@ public class Movie extends Holiday {
 	}
 
 	private final void ticket (final Integer booking) {
-		
-		switch(booking) {
-		case 1 :
-			System.out.println("Thankyou for Booking Morning Show.. Have a Great Fun!!!");
-			break;
-		case 2 :
-				System.out.println("Thankyou for Booking Afternoon Show.. Have a Great Fun!!!");
-				break;
-		case 3: 
-				System.out.println("Thankyou for Booking Evening Show.. Have a Great Fun!!!");
-				break;
-		case 4 :
-				System.out.println("Thankyou for Booking Night Show.. Have a Great Fun!!!");
-				break;
-		default :
-			System.out.println("Welcome to Java Cinemas");
+
+		switch (booking) {
+			case 1 -> System.out.println("Thankyou for Booking Morning Show.. Have a Great Fun!!!");
+			case 2 -> System.out.println("Thankyou for Booking Afternoon Show.. Have a Great Fun!!!");
+			case 3 -> System.out.println("Thankyou for Booking Evening Show.. Have a Great Fun!!!");
+			case 4 -> System.out.println("Thankyou for Booking Night Show.. Have a Great Fun!!!");
+			default -> System.out.println("Welcome to Java Cinemas");
 		}
 	}
 }
